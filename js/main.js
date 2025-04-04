@@ -1,61 +1,64 @@
-// Theme toggle functionality
-document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById("theme-toggle")
-  const themeIcon = document.getElementById("theme-icon")
-  const body = document.body
-
-  // Set current year in footer
-  document.getElementById("current-year").textContent = new Date().getFullYear()
-
-  // Check if user has a saved preference
-  const savedTheme = localStorage.getItem("theme")
-  if (savedTheme === "light") {
-    body.classList.remove("dark-mode")
-    body.classList.add("light-mode")
-    themeIcon.classList.remove("bi-sun-fill")
-    themeIcon.classList.add("bi-moon-fill")
+// Función para cambiar el tema
+function cambiarTema() {
+  const body = document.body;
+  const icono = document.getElementById("theme-icon");
+  
+  if (body.classList.contains("dark-mode")) {
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    icono.classList.remove("bi-sun-fill");
+    icono.classList.add("bi-moon-fill");
+    localStorage.setItem("theme", "light");
+  } else {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    icono.classList.remove("bi-moon-fill");
+    icono.classList.add("bi-sun-fill");
+    localStorage.setItem("theme", "dark");
   }
+}
 
-  // Toggle theme on button click
-  themeToggle.addEventListener("click", () => {
-    if (body.classList.contains("dark-mode")) {
-      // Switch to light mode
-      body.classList.remove("dark-mode")
-      body.classList.add("light-mode")
-      themeIcon.classList.remove("bi-sun-fill")
-      themeIcon.classList.add("bi-moon-fill")
-      localStorage.setItem("theme", "light")
-    } else {
-      // Switch to dark mode
-      body.classList.remove("light-mode")
-      body.classList.add("dark-mode")
-      themeIcon.classList.remove("bi-moon-fill")
-      themeIcon.classList.add("bi-sun-fill")
-      localStorage.setItem("theme", "dark")
+// Función para hacer scroll suave
+function hacerScrollSuave(e) {
+  e.preventDefault();
+  const idSeccion = this.getAttribute("href");
+  const seccion = document.querySelector(idSeccion);
+  
+  if (seccion) {
+    window.scrollTo({
+      top: seccion.offsetTop - 70,
+      behavior: "smooth"
+    });
+    
+    // Cerrar menú móvil si está abierto
+    const menu = document.querySelector(".navbar-collapse");
+    if (menu.classList.contains("show")) {
+      menu.classList.remove("show");
     }
-  })
+  }
+}
 
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault()
-
-      const targetId = this.getAttribute("href")
-      const targetElement = document.querySelector(targetId)
-
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 70, // Adjust for navbar height
-          behavior: "smooth",
-        })
-
-        // Close mobile menu if open
-        const navbarCollapse = document.querySelector(".navbar-collapse")
-        if (navbarCollapse.classList.contains("show")) {
-          navbarCollapse.classList.remove("show")
-        }
-      }
-    })
-  })
-})
+// Cuando la página se carga
+window.onload = function() {
+  // Poner el año actual en el footer
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+  
+  // Verificar tema guardado
+  const temaGuardado = localStorage.getItem("theme");
+  if (temaGuardado === "light") {
+    document.body.classList.remove("dark-mode");
+    document.body.classList.add("light-mode");
+    document.getElementById("theme-icon").classList.remove("bi-sun-fill");
+    document.getElementById("theme-icon").classList.add("bi-moon-fill");
+  }
+  
+  // Agregar evento para cambiar tema
+  document.getElementById("theme-toggle").onclick = cambiarTema;
+  
+  // Agregar eventos para scroll suave
+  const enlaces = document.querySelectorAll('a[href^="#"]');
+  for (let i = 0; i < enlaces.length; i++) {
+    enlaces[i].onclick = hacerScrollSuave;
+  }
+}
 
