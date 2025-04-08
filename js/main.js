@@ -60,5 +60,16 @@ window.onload = function() {
   for (let i = 0; i < enlaces.length; i++) {
     enlaces[i].onclick = hacerScrollSuave;
   }
+
+  // Control del botón de scroll to top
+  const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopButton.classList.add('visible');
+    } else {
+      scrollToTopButton.classList.remove('visible');
+    }
+  });
 }
 
