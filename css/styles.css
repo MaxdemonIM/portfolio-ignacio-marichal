@@ -294,7 +294,8 @@ section {
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-to-top i {
@@ -305,6 +306,7 @@ section {
   transform: translateY(-5px);
   background-color: var(--secondary-color);
   color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .scroll-to-top.visible {
