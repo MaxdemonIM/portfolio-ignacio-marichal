@@ -38,38 +38,36 @@ function hacerScrollSuave(e) {
   }
 }
 
-// Cuando la página se carga
-window.onload = function() {
-  // Poner el año actual en el footer
-  document.getElementById("current-year").textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+  // Actualizar año en el footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  // Toggle del tema claro/oscuro
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
   
-  // Verificar tema guardado
-  const temaGuardado = localStorage.getItem("theme");
-  if (temaGuardado === "light") {
-    document.body.classList.remove("dark-mode");
-    document.body.classList.add("light-mode");
-    document.getElementById("theme-icon").classList.remove("bi-sun-fill");
-    document.getElementById("theme-icon").classList.add("bi-moon-fill");
-  }
-  
-  // Agregar evento para cambiar tema
-  document.getElementById("theme-toggle").onclick = cambiarTema;
-  
-  // Agregar eventos para scroll suave
-  const enlaces = document.querySelectorAll('a[href^="#"]');
-  for (let i = 0; i < enlaces.length; i++) {
-    enlaces[i].onclick = hacerScrollSuave;
-  }
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    themeIcon.classList.toggle('bi-sun-fill');
+    themeIcon.classList.toggle('bi-moon-fill');
+  });
+
+  // Scroll suave para todos los enlaces internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 
   // Control del botón de scroll to top
   const scrollToTopButton = document.querySelector('.scroll-to-top');
-
+  
   window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-      scrollToTopButton.classList.add('visible');
-    } else {
-      scrollToTopButton.classList.remove('visible');
-    }
+    scrollToTopButton.classList.toggle('visible', window.pageYOffset > 300);
   });
-}
+});
 

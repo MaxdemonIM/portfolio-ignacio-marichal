@@ -280,10 +280,10 @@ section {
 /* Estilos para el botón de scroll to top */
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--accent);
+  color: var(--background);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -304,8 +304,8 @@ section {
 
 .scroll-to-top:hover {
   transform: translateY(-5px);
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--gold);
+  color: var(--background);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
