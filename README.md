@@ -38,13 +38,13 @@ Este es mi portfolio personal desarrollado con HTML, CSS, JavaScript y Bootstrap
 
 Puedes agregar capturas de pantalla del sitio para mostrar cómo se ve.
 
-## 👨‍💻 Autor
+ Autor
 
 **Ignacio Marichal**  
 Desarrollador web en formación - ORT Uruguay  
 
 ---
 
-## 📝 Licencia
+ Licencia
 
 Este proyecto es de uso libre para fines educativos y personales.
