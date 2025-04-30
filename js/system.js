@@ -1,8 +1,6 @@
-class Sistema {
+class System {
     constructor(){
         this.proyects = new Array();
-        this.technologies = new Array();
+        this.technologies = new Map();
     }
 }
-
-function 

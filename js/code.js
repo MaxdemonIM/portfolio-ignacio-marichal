@@ -1,6 +1,4 @@
 
-
-
 // Función para cambiar el tema
 function cambiarTema() {
   const body = document.body;
@@ -74,3 +72,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+
+function ListarProyectos() {
+  const contenedor = document.getElementById("lista-proyectos");
+
+  sistema.proyects.forEach(proyecto => {
+    const col = document.createElement("div");
+    col.className = "col-md-4 mb-4";
+
+    const card = `
+      <div class="card h-100">
+        <img src="${proyecto.img}" class="card-img-top" alt="imagen del proyecto">
+        <div class="card-body">
+          <h5 class="card-title">${proyecto.description}</h5>
+          <div class="skill-badge">
+            <p class="card-text">
+              Tecnologías: ${proyecto.technology.map(t => t.nombre).join(", ")}
+            </p>
+          </div>
+          <div class="text-center m-2">
+            <a href="${proyecto.link}" class="btn btn-success" target="_blank" rel="noopener noreferrer">
+              Ver proyecto
+            </a>
+          </div>
+
+        </div>
+      </div>
+    `;
+
+    col.innerHTML = card;
+    contenedor.appendChild(col);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  ListarProyectos();
+});

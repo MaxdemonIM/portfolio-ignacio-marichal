@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-  <link rel="icon" href="img/logo.png">
+  <link rel="icon" href="img/logo.webp">
   <link rel="stylesheet" href="css/styles.css">
   <title>Ignacio Marichal</title>
 </head>
@@ -17,10 +17,11 @@
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">
-        <img src="img/logo.png" alt="logo" class="logo">
+        <a class="navbar-brand" href="#inicio">
+        <img src="img/logo.webp" alt="logo" class="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
+        aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -69,7 +70,7 @@
         <div class="row justify-content-center text-center">
           <div class="col-md-8">
             <div class="profile-image-container mb-4">
-              <img src="img/cvPort.jpg" alt="Profile" class="profile-image">
+              <img src="img/cvPort.webp" alt="Profile" class="profile-image">
             </div>
             <h1 class="display-4 mb-3">Ignacio Marichal</h1>
             <p class="lead mb-4">
@@ -105,7 +106,7 @@
             <div class="card h-100">
               <div class="card-body text-center">
                 <i class="bi bi-lightbulb-fill display-4 mb-3"></i>
-                <h3 class="card-title h4">Aprendizaje Continuo</h3>
+                <h3 class="card-title">Aprendizaje Continuo</h3>
                 <p class="card-text">
                   Me esfuerzo constantemente por mejorar como profesional. Tengo un interés genuino por aprender nuevas tecnologías y aplicar ese conocimiento en proyectos reales.
                 </p>
@@ -117,7 +118,7 @@
             <div class="card h-100">
               <div class="card-body text-center">
                 <i class="bi bi-gear-fill display-4 mb-3"></i>
-                <h3 class="card-title h4">Responsabilidad y Tenacidad</h3>
+                <h3 class="card-title">Responsabilidad y Tenacidad</h3>
                 <p class="card-text">
                   Soy una persona aplicada, con gran sentido del compromiso. Afronto cada desafío con dedicación, persistencia y mentalidad de mejora continua.
                 </p>
@@ -129,7 +130,7 @@
             <div class="card h-100">
               <div class="card-body text-center">
                 <i class="bi bi-people-fill display-4 mb-3"></i>
-                <h3 class="card-title h4">Trabajo en Equipo</h3>
+                <h3 class="card-title">Trabajo en Equipo</h3>
                 <p class="card-text">
                   Me adapto fácilmente a nuevos entornos y disfruto colaborar con otros. Creo que el trabajo en equipo potencia el aprendizaje y la calidad de los resultados.
                 </p>
@@ -159,17 +160,26 @@
           <div class="col-md-6">
             <h3 class="mb-4 text-lg-center">Technical Skills</h3>
             <div class="skills-container">
-              <span class="skill-badge"> <img src="img/html.png" class="skill-logo" alt="Logo de html">HTML</span>
-              <span class="skill-badge"> <img src="img/css.png" class="skill-logo" alt="Logo de css">CSS</span>
-              <span class="skill-badge"> <img src="img/bootstrap.png" class="skill-logo" alt="Logo de bootstrap">Bootstrap</span>
-              <span class="skill-badge"> <img src="img/javascript.png" class="skill-logo" alt="Logo de javascript">JavaScript básico</span>
-              <span class="skill-badge"> <img src="img/asp-net.png" class="skill-logo" alt="Logo de asp">ASP.NET</span>
+              <span class="skill-badge"> <img src="img/html.webp" class="skill-logo" alt="Logo de html">HTML</span>
+              <span class="skill-badge"> <img src="img/css.webp" class="skill-logo" alt="Logo de css">CSS</span>
+              <span class="skill-badge"> <img src="img/bootstrap.webp" class="skill-logo" alt="Logo de bootstrap">Bootstrap</span>
+              <span class="skill-badge"> <img src="img/javascript.webp" class="skill-logo" alt="Logo de javascript">JavaScript básico</span>
+              <span class="skill-badge"> <img src="img/asp-net.webp" class="skill-logo" alt="Logo de asp">ASP.NET</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Proyectos -->
+
+    <section id="proyectos" class="container my-5">
+      <h2 class="text-center mb-4">Mis Proyectos</h2>
+      <div id="lista-proyectos" class="row">
+        <!-- Acá se cargarán los proyectos -->
+      </div>
+    </section>
+    
 
     <!-- Contacto -->
     <section id="contacto" class="py-5">
@@ -189,7 +199,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div><!--
           <div class="col-md-6">
             <form class="contact-form">
               <div class="mb-3">
@@ -217,7 +227,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
   </main>
 
   <!-- Footer -->
@@ -247,8 +257,8 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/class.js"></script>
   <script src="js/system.js"></script>
+  <script src="js/class.js"></script>
   <script src="js/code.js"></script>
   
   <!-- Botón ir arriba -->

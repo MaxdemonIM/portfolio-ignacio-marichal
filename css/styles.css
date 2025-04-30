@@ -24,8 +24,6 @@ body.light-mode {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: background-color var(--transition-time) ease, color var(--transition-time) ease, border-color
-    var(--transition-time) ease;
 }
 
 body {
@@ -159,6 +157,16 @@ body.light-mode .navbar-toggler-icon {
 }
 
 /* Skills section */
+
+
+.soft-skill-badge {
+  background-color: var(--pink);
+  font: bold;
+  color: var(--background);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
 .skill-logo {
   width: 40px;
 }
@@ -172,6 +180,7 @@ body.light-mode .navbar-toggler-icon {
 
 .skill-badge {
   background-color: var(--accent);
+  font: bolder;
   color: var(--background);
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -180,12 +189,6 @@ body.light-mode .navbar-toggler-icon {
   display: inline-block;
 }
 
-.soft-skill-badge {
-  background-color: var(--pink);
-  color: var(--background);
-  border-radius: 10px;
-  padding: 0.5rem 1rem;
-}
 
 /* Contact section */
 .contact-info {
