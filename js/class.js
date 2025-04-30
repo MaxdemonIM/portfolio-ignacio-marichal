@@ -40,5 +40,4 @@ sistema.technologies.set("C#", csharp);
 sistema.proyects.push(
   new Proyect("img/portfolio.webp", "Portfolio personal responsive", [html, css, js, bootstrap], "https://github.com/MaxdemonIM/portfolio-ignacio-marichal"),
   new Proyect("img/consoleapp.webp", "Primera parte de sistema de gestión de aerolinea en consola", [csharp], "#https://github.com/MaxdemonIM/obligatorio-programacion-2"),
-  new Proyect("img/ingk.webp", "Página de tatuajes de IGNK", [html, css, js], "https://github.com/MaxdemonIM/proyecto-js-agencia-viajes")
 );
