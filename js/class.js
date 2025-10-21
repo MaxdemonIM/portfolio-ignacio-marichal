@@ -26,6 +26,7 @@ const css = new Technology("img/css.webp", "CSS");
 const js = new Technology("img/javascript.webp", "JavaScript");
 const bootstrap = new Technology("img/bootstrap.webp", "Bootstrap");
 const csharp = new Technology("img/asp-net.webp", "C#");
+const sql = new Technology("img/sql.webp", "sql");
 
 
 // Agregarlas al sistema (mapa)
@@ -34,10 +35,12 @@ sistema.technologies.set("CSS", css);
 sistema.technologies.set("JavaScript", js);
 sistema.technologies.set("Bootstrap", bootstrap);
 sistema.technologies.set("C#", csharp);
+sistema.technologies.set("SQL", sql);
 
 
 // Agregar proyectos reales
 sistema.proyects.push(
-  new Proyect("img/portfolio.webp", "Portfolio personal responsive", [html, css, js, bootstrap], "https://github.com/MaxdemonIM/portfolio-ignacio-marichal"),
-  new Proyect("img/consoleapp.webp", "Primera parte de sistema de gestión de aerolinea en consola", [csharp], "#https://github.com/MaxdemonIM/obligatorio-programacion-2"),
+  new Proyect("img/controlDePagos.png", "Proyecto MVC Clean Arquitecture y API code-first con Entity Framework", [csharp], [sql], "https://github.com/Prog-P3-2025-2/M3C_IMEM"),
+
+  new Proyect("img/Altavia.png", "Proyecto académico MVC de aerolinea ficticia Altavia desplegado en Azure", [csharp], [bootstrap], [css], "#https://github.com/MaxdemonIM/obligatorio-programacion-2"),
 );
